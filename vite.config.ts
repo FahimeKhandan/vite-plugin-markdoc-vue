@@ -16,6 +16,10 @@ export default defineConfig({
           render: 'Callout',
           attributes: {},
         },
+        A2aStorTable: {
+          render: 'A2aStorTable',
+          attributes: {},
+        },
       },
     }),
   ],
