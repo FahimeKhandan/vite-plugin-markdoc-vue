@@ -1,7 +1,6 @@
 <script setup>
-import Content from "./content.md";
-import Callout from "./components/Callout.vue";
-import A2aStorTable from "./components/A2aStorePropsTable.vue";
+import payoutResponseCode from "./pages/docs/payoutResponseCode.md";
+import payoutResponseText from "./pages/docs/payoutResponseText.md";
 </script>
 
 <template>
@@ -106,9 +105,9 @@ import A2aStorTable from "./components/A2aStorePropsTable.vue";
       </div>
     </aside>
 
-    <div class="px-[4%] mr-[220px]">
+    <div class="w-screen pr-[220px]">
       <!-- navbar -->
-      <ul class="flex justify-end py-5">
+      <ul class="flex justify-end py-5 pl-[4%]">
         <li class="mr-6">
           <a class="text-blue-500 hover:text-blue-800" href="#">Active</a>
         </li>
@@ -121,8 +120,11 @@ import A2aStorTable from "./components/A2aStorePropsTable.vue";
         <li class="mr-6">
           <a class="text-gray-400 cursor-not-allowed" href="#">Disabled</a>
         </li>
-      </ul>
-      <Content :components="{ Callout, A2aStorTable }" />
+      </ul> 
+      <div class=" px-[4%] pt-16  w-full grid grid-cols-2 gap-x-20">
+        <payoutResponseText/>
+        <payoutResponseCode class="max-h-[73vh] overflow-y-scroll"/>
+      </div>
     </div>
   </div>
 </template>
