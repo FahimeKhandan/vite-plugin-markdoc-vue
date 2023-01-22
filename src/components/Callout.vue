@@ -1,5 +1,5 @@
 <template>
-    <div class="callout">scssassddddddddddddddddddddc
+    <div class="callout">
       ⚠️<slot />
     </div>
   </template>

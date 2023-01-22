@@ -7,11 +7,11 @@ import A2aStorTable from "./components/A2aStorePropsTable.vue";
 <template>
   <div class="flex">
     <aside
-      class="w-[220px] min-w-[220px] shadow-sm shadow-gray-400"
+      class="w-[220px] min-w-[220px] shadow-sm shadow-gray-400 fixed h-screen"
       aria-label="Sidebar"
     >
       <div
-        class="px-3 py-4 overflow-y-auto rounded bg-gray-50 dark:bg-gray-800"
+        class="px-3 py-4 overflow-y-auto  bg-gray-50 dark:bg-gray-800 h-full"
       >
         <!-- logo -->
         <a href="https://flowbite.com/" class="flex items-center pr-2.5 mb-5">
@@ -68,34 +68,34 @@ import A2aStorTable from "./components/A2aStorePropsTable.vue";
         <ul class="space-y-2">
           <li>
             <a
-              href="#"
+              href="#a2aList"
               class="flex items-center text-base font-normal text-gray-600 rounded-lg dark:text-white hover:text-gray-900 dark:hover:bg-gray-700"
             >
               <span class="mr-3"
-                >تسویه
+                >تسویه آنی
                 <ul class="space-y-2">
                   <li>
                     <a
-                      href="#submit"
+                      href="#a2aList"
                       class="flex items-center text-base font-normal text-gray-600 rounded-lg dark:text-white hover:text-gray-900 dark:hover:bg-gray-700"
                     >
-                      <span class="mr-3 py-1 px-2">تسویه آنی </span>
+                      <span class="mr-3 py-1 px-2"> لیست تسویه ها </span>
                     </a>
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="#submit"
                       class="flex items-center py-1 px-2 text-base font-normal text-gray-600 rounded-lg dark:text-white hover:text-gray-900 dark:hover:bg-gray-700"
                     >
-                      <span class="mr-3">تسویه پایا </span>
+                      <span class="mr-3"> ثبت درخواست تسویه </span>
                     </a>
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="#a2aParameters"
                       class="flex items-center py-1 px-2 text-base font-normal text-gray-600 rounded-lg dark:text-white hover:text-gray-900 dark:hover:bg-gray-700"
                     >
-                      <span class="mr-3">تسویه گروهی </span>
+                      <span class="mr-3"> پارامترهای مجاز </span>
                     </a>
                   </li>
                 </ul>
@@ -106,7 +106,7 @@ import A2aStorTable from "./components/A2aStorePropsTable.vue";
       </div>
     </aside>
 
-    <div class="px-[4%]">
+    <div class="px-[4%] mr-[220px]">
       <!-- navbar -->
       <ul class="flex justify-end py-5">
         <li class="mr-6">
