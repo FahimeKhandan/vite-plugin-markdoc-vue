@@ -18,18 +18,28 @@ h2{
 }
 
 h3{
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 
 h4{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+h5{
+  padding-bottom: 12px;
   font-size: 16px;
   font-weight: bold;
 }
 
+.ltr{
+  direction: ltr;
+}
+
 pre{
-  background-color: #222d63;
+  background-color: transparent !important;
   color: white;
   display: block;
   padding: 12px;
@@ -83,3 +93,9 @@ table tbody td:last-child {
 th{
   text-align: left;
 } 
+
+
+.parameter-title{
+  margin-bottom: 8px;
+  padding-top: 16px;
+}

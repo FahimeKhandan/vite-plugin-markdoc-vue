@@ -1,12 +1,5 @@
 
-```ts
-// Hello world
-const a: string = "123"
-const b: number = 345
-```
-
-
-```json 
+```json twoslash
 
 {
 "status": 1,

@@ -1,39 +1,16 @@
+##### پارامترها
+---
 
-{% table %}
+**status** {% .parameter-title %}
 
-- name {% width="50%" %}
-- Type  {% colspan=2 %}
-- Status  {% align="right" %}
+1 به معنای این است که http response از خانواده‌ی ۲۰۰ است.
+
+0 به معنای این است که http response از خانواده‌ی ۴۰۰ یا ۵۰۰ است.
+
 ---
-- amount
-- integer
-- required
----
-- iban
-- string
-- required
----
-- track_id
-- string 
-- required
----
-- payment_number
-- integer
-- optional
----
-- notify_url
-- string
-- optional
----
-- description
-- string
-- optional
----
-- is_instant
-- boolean
-- optional
----
-- type
-- string
-- optional
-{% /table %}
+
+**data** {% .parameter-title %}
+
+1 به معنای این است که http response از خانواده‌ی ۲۰۰ است.
+
+0 به معنای این است که http response از خانواده‌ی ۴۰۰ یا ۵۰۰ است.

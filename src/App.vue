@@ -10,17 +10,17 @@ import payoutResponseText from "./pages/docs/payoutResponseText.md";
       aria-label="Sidebar"
     >
       <div
-        class="px-3 py-4 overflow-y-auto  bg-gray-50 dark:bg-gray-800 h-full"
+        class="px-3 py-14 overflow-y-auto h-full"
       >
         <!-- logo -->
-        <a href="https://flowbite.com/" class="flex items-center pr-2.5 mb-5">
+        <a href="https://flowbite.com/" class="flex items-center pr-2 mb-5">
           <img
             src="https://cdn.vandar.io/public/logos/typo.svg"
             class="h-6 ml-3 sm:h-7"
             alt="Vandar Logo"
           />
           <a
-            class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+            class="self-center text-xl font-semibold whitespace-nowrap"
             >API</a
           >
         </a>
@@ -29,10 +29,10 @@ import payoutResponseText from "./pages/docs/payoutResponseText.md";
         <div class="flex justify-center">
           <div class="mb-3 w-full">
             <div
-              class="input-group relative flex flex-wrap items-stretch w-full mb-4 border border-solid border-gray-300 rounded-lg bg-teal-50"
+              class="input-group relative flex flex-wrap items-stretch w-full mb-4 border border-solid border-gray-300 rounded-lg bg-gray-50"
             >
               <span
-                class="input-group-text flex items-center pr-3 py-1.5 text-base font-normal text-gray-600 text-center whitespace-nowrap rounded"
+                class="input-group-text flex items-center pr-3 py-2 text-base font-normal text-gray-600 text-center whitespace-nowrap rounded"
                 id="basic-addon2"
               >
                 <svg
@@ -53,7 +53,7 @@ import payoutResponseText from "./pages/docs/payoutResponseText.md";
               </span>
               <input
                 type="search"
-                class="form-control relative flex-auto min-w-0 block w-4/6 px-3 py-1.5 text-base font-normal text-gray-700 bg-transparent bg-clip-padding transition ease-in-out m-0 focus:outline-none"
+                class="form-control relative flex-auto min-w-0 block w-4/6 px-3 py-1 text-base font-normal text-gray-700 bg-transparent bg-clip-padding transition ease-in-out m-0 focus:outline-none"
                 placeholder="جستجو"
                 aria-label="Search"
                 aria-describedby="button-addon2"
@@ -68,7 +68,7 @@ import payoutResponseText from "./pages/docs/payoutResponseText.md";
           <li>
             <a
               href="#a2aList"
-              class="flex items-center text-base font-normal text-gray-600 rounded-lg dark:text-white hover:text-gray-900 dark:hover:bg-gray-700"
+              class="flex items-center text-base font-normal text-gray-500 rounded-lg hover:text-gray-800"
             >
               <span class="mr-3"
                 >تسویه آنی
@@ -76,7 +76,7 @@ import payoutResponseText from "./pages/docs/payoutResponseText.md";
                   <li>
                     <a
                       href="#a2aList"
-                      class="flex items-center text-base font-normal text-gray-600 rounded-lg dark:text-white hover:text-gray-900 dark:hover:bg-gray-700"
+                      class="flex items-center text-base font-normal text-gray-500 rounded-lg hover:text-gray-800"
                     >
                       <span class="mr-3 py-1 px-2"> لیست تسویه ها </span>
                     </a>
@@ -84,7 +84,7 @@ import payoutResponseText from "./pages/docs/payoutResponseText.md";
                   <li>
                     <a
                       href="#submit"
-                      class="flex items-center py-1 px-2 text-base font-normal text-gray-600 rounded-lg dark:text-white hover:text-gray-900 dark:hover:bg-gray-700"
+                      class="flex items-center py-1 px-2 text-base font-normal text-gray-500 rounded-lg hover:text-gray-800"
                     >
                       <span class="mr-3"> ثبت درخواست تسویه </span>
                     </a>
@@ -92,7 +92,7 @@ import payoutResponseText from "./pages/docs/payoutResponseText.md";
                   <li>
                     <a
                       href="#a2aParameters"
-                      class="flex items-center py-1 px-2 text-base font-normal text-gray-600 rounded-lg dark:text-white hover:text-gray-900 dark:hover:bg-gray-700"
+                      class="flex items-center py-1 px-2 text-base font-normal text-gray-500 rounded-lg  hover:text-gray-800"
                     >
                       <span class="mr-3"> پارامترهای مجاز </span>
                     </a>
@@ -109,21 +109,23 @@ import payoutResponseText from "./pages/docs/payoutResponseText.md";
       <!-- navbar -->
       <ul class="flex justify-end py-5 pl-[4%]">
         <li class="mr-6">
-          <a class="text-blue-500 hover:text-blue-800" href="#">Active</a>
+          <a class="text-primary-500 hover:text-gray-800" href="#">Active</a>
+        </li>
+        <li class="mr6">
+          <a class="text-primary-500 hover:text-gray-800" href="#">Link</a>
         </li>
         <li class="mr-6">
-          <a class="text-blue-500 hover:text-blue-800" href="#">Link</a>
-        </li>
-        <li class="mr-6">
-          <a class="text-blue-500 hover:text-blue-800" href="#">Link</a>
-        </li>
-        <li class="mr-6">
-          <a class="text-gray-400 cursor-not-allowed" href="#">Disabled</a>
+          <a class="text-primary-500 hover:text-gray-800" href="#">Link</a>
         </li>
       </ul> 
-      <div class=" px-[4%] pt-16  w-full grid grid-cols-2 gap-x-20">
+      <div class=" px-[4%] pt-16  w-full grid grid-cols-2 gap-x-5">
         <payoutResponseText/>
-        <payoutResponseCode class="max-h-[73vh] overflow-y-scroll"/>
+        <div class="ltr">
+          <div class="bg-gray-200 h-10 rounded-t-lg px-3 flex items-center text-gray-600">Response</div>
+          <div class="p-3 bg-gray-50 border border-t-0 max-h-[73vh] overflow-y-scroll">
+            <payoutResponseCode />
+          </div>
+        </div>
       </div>
     </div>
   </div>
