@@ -1,6 +1,8 @@
 ##### پارامترها
 ---
 
+<Attributes/>
+
 status {% .parameter-title %}
 
 1 به معنای این است که http response از خانواده‌ی ۲۰۰ است.

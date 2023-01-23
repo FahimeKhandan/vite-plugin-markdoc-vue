@@ -85,6 +85,10 @@ export default defineConfig({
           render: 'A2aStorTable',
           attributes: {},
         },
+        attributes: {
+          render: 'Attributes',
+          attributes: {},
+        },
       },
     }),
   ],

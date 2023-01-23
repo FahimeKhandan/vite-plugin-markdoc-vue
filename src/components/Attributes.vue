@@ -1,8 +1,8 @@
 <template>
     <div>
-        <span class="font-">id</span>
-        <span>details</span>
-        <span>important details</span>
+        <span class="font-body-1-bold">id</span>
+        <span class="text-gray-400 text-body-2">details</span>
+        <span class="text-orange-400 text-body-2">important details</span>
     </div>
 </template>
 

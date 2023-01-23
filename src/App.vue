@@ -1,6 +1,7 @@
 <script setup>
 import payoutResponseCode from "./pages/docs/payoutResponseCode.md";
 import payoutResponseText from "./pages/docs/payoutResponseText.md";
+import attributes from "./components/Attributes.vue"
 </script>
 
 <template>
@@ -119,7 +120,7 @@ import payoutResponseText from "./pages/docs/payoutResponseText.md";
         </li>
       </ul> 
       <div class=" px-[4%] pt-16  w-full grid grid-cols-2 gap-x-5">
-        <payoutResponseText/>
+        <payoutResponseText :components="{ attributes}"/>
         <div class="ltr">
           <div class="bg-gray-200 h-10 rounded-t-lg px-3 flex items-center text-gray-600">Response</div>
           <div class="p-3 bg-gray-50 border border-t-0 max-h-[73vh] overflow-y-scroll">
