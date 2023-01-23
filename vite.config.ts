@@ -6,72 +6,74 @@ import { parse, transform, renderers } from '@markdoc/markdoc'
 import { renderCodeToHTML, runTwoSlash, createShikiHighlighter } from "shiki-twoslash"
 import { v4 as uuid } from 'uuid'
 import matter from 'gray-matter'
+import VueRenderer from 'vue-markdoc'
+
 
 export default defineConfig({
   test: {
     environment: 'jsdom',
   },
   plugins: [
-    sourceTransform({
-      test: ({ id }) => id.endsWith('.md'),
-      transform: async ({ source }) => {
-        const { data: frontmatter } = matter(source)
+    // sourceTransform({
+    //   test: ({ id }) => id.endsWith('.md'),
+    //   transform: async ({ source }) => {
+    //     const { data: frontmatter } = matter(source)
         
-        const ast = parse(source)
+    //     const ast = parse(source)
         
-        const replacers: Record<string, string> = {}
+    //     const replacers: Record<string, string> = {}
 
-        const highlighter = await createShikiHighlighter({
-          theme: 'github-light'
-        })
+    //     const highlighter = await createShikiHighlighter({
+    //       theme: 'github-light'
+    //     })
         
-        const content = transform(ast, {
-          variables: {
-            frontmatter,
-          },
-          nodes: {
-            fence: {
-              transform (node) {
-                const twoslash = runTwoSlash(
-                  node.attributes.content,
-                  node.attributes.language,
-                  {}
-                )
+    //     const content = transform(ast, {
+    //       variables: {
+    //         frontmatter,
+    //       },
+    //       nodes: {
+    //         fence: {
+    //           transform (node) {
+    //             const twoslash = runTwoSlash(
+    //               node.attributes.content,
+    //               node.attributes.language,
+    //               {}
+    //             )
 
-                const html = renderCodeToHTML(
-                  twoslash.code,
-                  node.attributes.language,
-                  { twoslash: true },
-                  { themeName: "vitesse-dark" },
-                  highlighter,
-                  twoslash
-                )
+    //             const html = renderCodeToHTML(
+    //               twoslash.code,
+    //               node.attributes.language,
+    //               { twoslash: true },
+    //               { themeName: "vitesse-dark" },
+    //               highlighter,
+    //               twoslash
+    //             )
 
-                const id = uuid()
-                replacers[id] = html
+    //             const id = uuid()
+    //             replacers[id] = html
 
-                return id
-              }
-            }
-          }
-        })
-        const html = renderers.html(content)
+    //             return id
+    //           }
+    //         }
+    //       }
+    //     })
+    //     const html = renderers.html(content)
 
-        // Hacky workaround until Markdoc supports
-        // unescaped HTML
-        const withUnescapedHtml = (() => {
-          let withUnescapedHtml = html
+    //     // Hacky workaround until Markdoc supports
+    //     // unescaped HTML
+    //     const withUnescapedHtml = (() => {
+    //       let withUnescapedHtml = html
 
-          for (const id in replacers) {
-            withUnescapedHtml = withUnescapedHtml.replace(id, replacers[id])
-          }
+    //       for (const id in replacers) {
+    //         withUnescapedHtml = withUnescapedHtml.replace(id, replacers[id])
+    //       }
 
-          return withUnescapedHtml
-        })()
+    //       return withUnescapedHtml
+    //     })()
 
-        return `<template>${withUnescapedHtml}</template>`
-      }
-    }),
+    //     return `<template>${withUnescapedHtml}</template>`
+    //   }
+    // }),
     vue({
       include: [/\.vue$/, /\.md$/],
     }),
@@ -85,7 +87,7 @@ export default defineConfig({
           render: 'A2aStorTable',
           attributes: {},
         },
-        attributes: {
+        Attributes: {
           render: 'Attributes',
           attributes: {},
         },
