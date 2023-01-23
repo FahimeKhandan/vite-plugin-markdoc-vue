@@ -1,7 +1,7 @@
 ##### پارامترها
 ---
 
-**status** {% .parameter-title %}
+status {% .parameter-title %}
 
 1 به معنای این است که http response از خانواده‌ی ۲۰۰ است.
 
@@ -9,7 +9,7 @@
 
 ---
 
-**data** {% .parameter-title %}
+data {% .parameter-title %}
 
 1 به معنای این است که http response از خانواده‌ی ۲۰۰ است.
 

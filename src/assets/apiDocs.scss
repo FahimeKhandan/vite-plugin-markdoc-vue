@@ -1,0 +1,92 @@
+
+h1{
+    @apply text-title-2-bold;
+  }
+  
+  h2{
+    @apply text-title-2-bold;
+  }
+  
+  h3{
+    @apply text-caption-1-bold;
+  }
+  
+  
+  h4{
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  h5{
+    padding-bottom: 12px;
+    @apply text-title-5-bold;
+  }
+  
+  .ltr{
+    direction: ltr;
+  }
+
+  p{
+    @apply text-body-2;
+  }
+  
+  pre{
+    background-color: transparent !important;
+    color: white;
+    display: block;
+    padding: 12px;
+    direction: ltr;
+  }
+  
+  .keyword{
+    color: aquamarine;
+  }
+  
+  table{
+    direction: ltr;
+    width: 100%;
+    color: #3c4257;
+  }
+  
+  table thead tr th {
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: left;
+    color: #697386;
+    padding: 0 16px 8px 16px;
+    vertical-align: bottom;
+  }
+  
+  table tbody tr:nth-child(2n+1) td {
+    background: #f7fafc;
+  }
+  
+  table tbody td {
+    padding: 16px 16px;
+    border-color: #e3e8ee;
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 1px;
+  }
+  
+  table tbody tr:first-child>td {
+    border-top-width: 1px;
+  }
+  
+  table tbody td:first-child, .Table tbody td[rowspan]+td {
+    border-left-width: 1px;
+  }
+  
+  table tbody td:last-child {
+    border-right-width: 1px;
+  }
+  
+  th{
+    text-align: left;
+  } 
+  
+  
+  .parameter-title{
+    @apply text-body-1-bold mb-2 pt-4;
+  }

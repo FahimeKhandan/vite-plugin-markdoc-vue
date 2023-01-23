@@ -141,7 +141,6 @@ module.exports = {
                 fontWeight: "325"
             }
         ],
-
         "caption-1-bold": [
             "12px",
             {
