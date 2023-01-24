@@ -2,6 +2,7 @@
 import payoutResponseCode from "./pages/docs/payoutResponseCode.md";
 import payoutResponseText from "./pages/docs/payoutResponseText.md";
 import Attributes from "./components/Attributes.vue"
+import CollapsibleAttributes from "./components/CollapsibleAttributes.vue"
 </script>
 
 <template>
@@ -119,10 +120,10 @@ import Attributes from "./components/Attributes.vue"
           <a class="text-primary-500 hover:text-gray-800" href="#">Link</a>
         </li>
       </ul> 
-      <div class=" px-[4%] pt-16  w-full grid grid-cols-2 gap-x-5">
-        <payoutResponseText  :components="{ Callout, Attributes }"/>
-        <div class="ltr">
-          <div class="bg-gray-200 h-10 rounded-t-lg px-3 flex items-center text-gray-600">Response</div>
+      <div class=" px-[4%] pt-16  w-full grid grid-cols-2">
+        <payoutResponseText :components="{ CollapsibleAttributes, Attributes }"/>
+        <div class="ltr mr-16">
+          <div class="bg-response-toolbar-bg h-10 rounded-t-lg px-3 flex items-center text-gray-600">Response</div>
           <div class="p-3 bg-gray-50 border border-t-0 max-h-[73vh] overflow-y-scroll">
             <payoutResponseCode />
           </div>

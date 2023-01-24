@@ -1,4 +1,4 @@
-import { createApp,provide } from 'vue'
+import { createApp,defineProps } from 'vue'
 import './assets/style.css'
 import App from './App.vue'
 import "./assets/apiDocs.scss"
@@ -8,6 +8,5 @@ const app = createApp(App,)
 // app.component('attributes', Attributes) 
 // app.component('a2aStorTable', A2aStorTable) 
 
-provide('globalVariable', 111)
    
 app.mount('#app')

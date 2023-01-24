@@ -10,8 +10,8 @@ import {
 } from "shiki-twoslash";
 import { v4 as uuid } from "uuid";
 import matter from "gray-matter";
-import VueRenderer from "vue-markdoc";
-const mdExtRE = /\.(md)$/i;
+
+export type Options = Parameters<typeof transform>["1"];
 
 export default defineConfig({
   test: {
@@ -24,25 +24,36 @@ export default defineConfig({
         const { data: frontmatter } = matter(source);
         const ast = parse(source);
         const replacers: Record<string, string> = {};
-        const replacers1= {};
+        const replacers1 = {};
 
         const highlighter = await createShikiHighlighter({
           theme: "github-light",
         });
         const content = transform(ast, {
           tags: {
-            callout: {
-              render: "Callout",
-              attributes: {},
-            },
             A2aStorTable: {
               render: "A2aStorTable",
               attributes: {},
             },
             Attributes: {
               render: "Attributes",
-              attributes: {},
+              attributes: {
+                title: {
+                  type: String,
+                  required: true,
+                },
+                details: {
+                  type: String,
+                },
+                importantInfo: {
+                  type: String,
+                },
+              },
             },
+            collapsibleAttributes:{
+              render:'CollapsibleAttributes',
+              attributes: {},
+            }
           },
           variables: {
             frontmatter,
@@ -77,7 +88,6 @@ export default defineConfig({
         const contentStr = JSON.stringify(content);
         const replacerJson = JSON.stringify(replacers);
 
-        
         let sfc = `
           <script setup>
           import VueRenderer from 'vue-markdoc'
@@ -113,7 +123,7 @@ export default defineConfig({
           </script>
       
           <template>
-            <div class="myList" v-html='withUnescapedHtml' ></div>
+            <div v-html='withUnescapedHtml'></div>
           </template>
         `;
 
@@ -131,7 +141,11 @@ export default defineConfig({
         },
         A2aStorTable: {
           render: "A2aStorTable",
-          attributes: {},
+          attributes: {
+            title: {
+              type: String,
+            },
+          },
         },
         Attributes: {
           render: "Attributes",

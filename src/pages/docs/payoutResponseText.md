@@ -1,18 +1,23 @@
 ##### پارامترها
 
-
-{% Attributes %}
+- {% Attributes title="blocked_amount" details="string" %}
+مبلغی که به دستور احکام قضایی در حساب مسدود شده است.
+{% /Attributes%}
+- 
+{% Attributes title="deductible_amount" importantInfo="required" %}
+مبلغ قابل برداشت امروز
 {% /Attributes%}
 
-status {% .parameter-title %}
-
-1 به معنای این است که http response از خانواده‌ی ۲۰۰ است.
-
-0 به معنای این است که http response از خانواده‌ی ۴۰۰ یا ۵۰۰ است.
 
 
-data {% .parameter-title %}
+- {% Attributes title="wallet" details="number" importantInfo="required" %}
+مبلغ کیف پول کاربر به تومان
+{% /Attributes%}
 
-1 به معنای این است که http response از خانواده‌ی ۲۰۰ است.
 
-0 به معنای این است که http response از خانواده‌ی ۴۰۰ یا ۵۰۰ است.
+- {% Attributes title="track_id" details="number" importantInfo="required" %}
+رشته پیگیری که به ازای هر درخواست تسویه بایستی یکتا باشد. پیشنهاد ما استفاده از uuid برای این پارامتر است.این پارامتر به حروف بزرگ و کوچک حساس است.
+{% /Attributes%}
+
+
+{% collapsibleAttributes/ %}
