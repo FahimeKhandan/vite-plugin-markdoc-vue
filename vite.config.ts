@@ -29,7 +29,7 @@ export default defineConfig({
         const replacers1 = {};
 
         const highlighter = await createShikiHighlighter({
-          theme: "github-light",
+          theme: "min-light",
         });
         const content = transform(ast, {
           tags: {
@@ -89,7 +89,7 @@ export default defineConfig({
                   twoslash.code,
                   node.attributes.language,
                   { twoslash: true },
-                  { themeName: "vitesse-dark" },
+                  { themeName: "min-light" },
                   highlighter,
                   twoslash
                 );
