@@ -6,7 +6,44 @@ import CollapsibleItem from "./components/CollapsibleItem.vue"
 import CollapsibleParent from "./components/CollapsibleParent.vue"
 
 import 'tw-elements';
+</script>
 
+<script>
+
+export default{
+
+mounted () {
+  this.observeSections()
+},
+methods: {
+  observeSections() {
+    try {
+      this.sectionObserver.disconnect()
+    } catch (error) {}
+
+    const options = {
+      rootMargin: '0px 0px',
+      threshold: 0
+    }
+    this.sectionObserver = new IntersectionObserver(this.sectionObserverHandler, options)
+  
+    // Observe each section
+    const sections = document.querySelectorAll('.section')
+    sections.forEach(section => {
+      this.sectionObserver.observe(section)
+    })
+  },
+  sectionObserverHandler (entries) {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+         const sectionId = entry.target.id
+         // Push sectionId to router here 
+         this.$router.push({ name: this.$route.name, hash: `#${sectionId}` })
+      }
+    }
+  }
+}
+}
 </script>
 
 <template>
@@ -124,15 +161,30 @@ import 'tw-elements';
           <a class="text-primary-500 hover:text-gray-800" href="#">Link</a>
         </li>
       </ul> 
-      <div class=" px-[4%] pt-16  w-full grid grid-cols-2">
-        <payoutResponseText :components="{ CollapsibleItem, Attributes, CollapsibleParent }"/>
+
+
+      <section class=" px-[4%] py-[74px] w-full grid grid-cols-2">
+        <payoutResponseText :components="{ CollapsibleItem, Attributes, CollapsibleParent }" class="max-h-screen overflow-y-auto no-scrollbar"/>
         <div class="ltr mr-16">
-          <div class="bg-response-toolbar-bg h-10 rounded-t-lg px-3 flex items-center text-gray-600">Response</div>
+          <div class="bg-response-toolbar-bg h-10 rounded-t-lg px-3 flex items-center text-gray-600 text-body-1-bold">Response</div>
           <div class="p-3 bg-gray-50 border border-t-0 max-h-[73vh] overflow-y-scroll">
             <payoutResponseCode />
           </div>
         </div>
-      </div>
+      </section>
+
+      <hr class="mx-[4%]"/>
+
+      <section class=" px-[4%] py-[74px]  w-full grid grid-cols-2">
+        <payoutResponseText :components="{ CollapsibleItem, Attributes, CollapsibleParent }" class="max-h-screen overflow-y-auto no-scrollbar"/>
+        <div class="ltr mr-16">
+          <div class="bg-response-toolbar-bg h-10 rounded-t-lg px-3 flex items-center text-gray-600 text-body-1-bold">Response</div>
+          <div class="p-3 bg-gray-50 border border-t-0 max-h-[73vh] overflow-y-scroll">
+            <payoutResponseCode />
+          </div>
+        </div>
+      </section>
+      
     </div>
   </div>
 </template>

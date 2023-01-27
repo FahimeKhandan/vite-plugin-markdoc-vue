@@ -16,6 +16,7 @@ specifiers:
   parse5: ^7.0.0
   pnpm: ^7.1.0
   postcss: ^8.4.21
+  remixicon: ^2.5.0
   sass: ^1.57.1
   shiki-twoslash: ^3.1.0
   tailwindcss: ^3.2.4
@@ -32,6 +33,7 @@ specifiers:
 
 dependencies:
   '@markdoc/markdoc': 0.1.2
+  remixicon: 2.5.0
   sass: 1.57.1
   tw-elements: 1.0.0-alpha13_postcss@8.4.21
 
@@ -3233,6 +3235,10 @@ packages:
     resolution: {integrity: sha512-pq2bWo9mVD43nbts2wGv17XLiNLya+GklZ8kaDLV2Z08gDCsGpnKn9BFMepvWuHCbyVvY7J5o5+BVvoQbmlJLg==}
     engines: {node: '>=8'}
     dev: true
+
+  /remixicon/2.5.0:
+    resolution: {integrity: sha512-q54ra2QutYDZpuSnFjmeagmEiN9IMo56/zz5dDNitzKD23oFRw77cWo4TsrAdmdkPiEn8mxlrTqxnkujDbEGww==}
+    dev: false
 
   /resolve-from/4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}

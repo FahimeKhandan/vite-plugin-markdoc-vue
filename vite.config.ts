@@ -58,7 +58,13 @@ export default defineConfig({
                 title:{
                   type:String,
                   required:true
-                } 
+                },
+                details: {
+                  type: String,
+                },
+                importantInfo: {
+                  type: String,
+                },
               },
             },
             collapsibleParent:{
