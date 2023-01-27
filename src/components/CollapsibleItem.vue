@@ -1,6 +1,6 @@
 <template>
-  <div class="accordion-item bg-white border-t border-gray-200">
-    <p class="accordion-header mb-0" :id="'heading' + id">
+  <div class="accordion-item bg-white ">
+    <p class="accordion-header mb-0 border-t border-gray-200" :id="'heading' + id">
       <button
         class="relative flex items-center w-full py-4 px-5 text-base text-gray-700 text-left bg-white border-0 rounded-none transition text-body-1-bold focus:outline-none"
         type="button"
