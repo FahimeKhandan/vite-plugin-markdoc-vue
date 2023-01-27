@@ -26,5 +26,8 @@ module.exports = {
         'yekan-faNum-regular': ['yekan-faNum-regular'],
       }
     },
-    plugins: [],
+    plugins: [
+      require('tw-elements/dist/plugin')
+    ],
+    // important: true,
   }

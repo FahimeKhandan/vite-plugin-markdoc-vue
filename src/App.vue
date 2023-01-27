@@ -2,7 +2,11 @@
 import payoutResponseCode from "./pages/docs/payoutResponseCode.md";
 import payoutResponseText from "./pages/docs/payoutResponseText.md";
 import Attributes from "./components/Attributes.vue"
-import CollapsibleAttributes from "./components/CollapsibleAttributes.vue"
+import CollapsibleItem from "./components/CollapsibleItem.vue"
+import CollapsibleParent from "./components/CollapsibleParent.vue"
+
+import 'tw-elements';
+
 </script>
 
 <template>
@@ -121,7 +125,7 @@ import CollapsibleAttributes from "./components/CollapsibleAttributes.vue"
         </li>
       </ul> 
       <div class=" px-[4%] pt-16  w-full grid grid-cols-2">
-        <payoutResponseText :components="{ CollapsibleAttributes, Attributes }"/>
+        <payoutResponseText :components="{ CollapsibleItem, Attributes, CollapsibleParent }"/>
         <div class="ltr mr-16">
           <div class="bg-response-toolbar-bg h-10 rounded-t-lg px-3 flex items-center text-gray-600">Response</div>
           <div class="p-3 bg-gray-50 border border-t-0 max-h-[73vh] overflow-y-scroll">
