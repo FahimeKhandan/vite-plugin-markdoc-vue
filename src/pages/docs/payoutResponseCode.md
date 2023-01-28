@@ -1,5 +1,5 @@
 
-```json twoslash {2, 3-4}
+```json twoslash
 
 {
 "status": 1,

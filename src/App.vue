@@ -1,6 +1,9 @@
 <script setup>
 import payoutResponseCode from "./pages/docs/payoutResponseCode.md";
+import directDebitResponseCode from "./pages/docs/directDebitResponseCode.md";
+import directDebitRequestCode from "./pages/docs/directDebitRequestCode.md";
 import payoutResponseText from "./pages/docs/payoutResponseText.md";
+import directDebitResponseText from "./pages/docs/directDebitResponseText.md";
 import Attributes from "./components/Attributes.vue";
 import CollapsibleItem from "./components/CollapsibleItem.vue";
 import CollapsibleParent from "./components/CollapsibleParent.vue";
@@ -158,19 +161,19 @@ methods: {
       </ul>
 
 
-      <section class="px-[4%] py-[74px] w-full grid grid-rows-4  grid-cols-11">
+      <section class="api-sections">
         <payoutResponseText
-        class="row-span-4 col-span-6 ml-16"
+        class="content-body"
           :components="{ CollapsibleItem, Attributes, CollapsibleParent }"
         />
-        <div class="ltr h-fit sticky top-0 pt-12 row-span-4 col-span-5">
-          <div class="code-container">
+        <div class="fence-container">
+          <div class="fence-item">
             <div
-              class="bg-response-toolbar h-10 rounded-t-lg px-3 flex items-center text-gray-600 text-body-1"
+              class="fence-toolbar"
             >
               Response
             </div>
-            <div class="p-3 bg-gray-50 max-h-[73vh] overflow-y-scroll">
+            <div class="fence-body">
               <payoutResponseCode />
             </div>
           </div>
@@ -179,20 +182,30 @@ methods: {
       
       <hr class="mx-[4%]" />
 
-      <section class="px-[4%] py-[74px] w-full grid grid-rows-4  grid-cols-11">
-        <payoutResponseText
-        class="row-span-4 col-span-6 ml-16"
+      <section class="api-sections">
+        <directDebitResponseText
+        class="content-body"
           :components="{ CollapsibleItem, Attributes, CollapsibleParent }"
         />
-        <div class="ltr h-fit sticky top-0 pt-12 row-span-4 col-span-5">
-          <div class="code-container-dark">
+        <div class="fence-container twin-fences">
+          <div class="fence-item dark">
             <div
-              class="bg-request-toolbar h-10 rounded-t-lg px-3 flex items-center text-gray-200 text-body-1"
+              class="fence-toolbar"
+            >
+              Request
+            </div>
+            <div class="fence-body">
+              <directDebitRequestCode />
+            </div>
+          </div>
+          <div class="fence-item">
+            <div
+              class="fence-toolbar"
             >
               Response
             </div>
-            <div class="p-3 bg-request-body max-h-[73vh] overflow-y-scroll">
-              <payoutResponseCode />
+            <div class="fence-body response">
+              <directDebitResponseCode />
             </div>
           </div>
         </div>
