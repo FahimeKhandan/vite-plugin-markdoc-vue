@@ -21,8 +21,9 @@ h5 {
 }
 
 h1,h2,h3,h4,h5{
+  @apply text-gray-800;
   +p{
-    @apply mt-5 text-gray-800;
+    @apply mt-5 ;
   }
 }
 

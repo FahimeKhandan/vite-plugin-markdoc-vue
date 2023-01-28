@@ -27,7 +27,6 @@
       :id="id"
       class="accordion-collapse collapse"
       :aria-labelledby="'heading' + id"
-      data-bs-parent="#accordion"
     >
       <div class="accordion-body py-4 px-5">
         <slot />

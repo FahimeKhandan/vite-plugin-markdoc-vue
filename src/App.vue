@@ -166,7 +166,7 @@ methods: {
       <section class=" px-[4%] py-[74px] w-full grid grid-cols-2">
         <payoutResponseText :components="{ CollapsibleItem, Attributes, CollapsibleParent }"/>
         <div class="ltr mr-16 h-fit sticky top-0 pt-12">
-          <div class="bg-response-toolbar-bg h-10 rounded-t-lg px-3 flex items-center text-gray-600 text-body-1-bold">Response</div>
+          <div class="bg-response-toolbar-bg h-10 rounded-t-lg px-3 flex items-center text-gray-600 text-body-1">Response</div>
           <div class="p-3 bg-gray-50 border border-t-0 max-h-[73vh] overflow-y-scroll">
             <payoutResponseCode />
           </div>
@@ -178,7 +178,7 @@ methods: {
       <section class=" px-[4%] py-[74px]  w-full grid grid-cols-2">
         <payoutResponseText :components="{ CollapsibleItem, Attributes, CollapsibleParent }"/>
         <div class="ltr mr-16 h-fit sticky top-0 pt-12">
-          <div class="bg-response-toolbar-bg h-10 rounded-t-lg px-3 flex items-center text-gray-600 text-body-1-bold">Response</div>
+          <div class="bg-response-toolbar-bg h-10 rounded-t-lg px-3 flex items-center text-gray-600 text-body-1">Response</div>
           <div class="p-3 bg-gray-50 border border-t-0 max-h-[73vh] overflow-y-scroll">
             <payoutResponseCode />
           </div>
