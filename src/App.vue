@@ -1,14 +1,14 @@
 <script setup>
 import payoutResponseCode from "./pages/docs/payoutResponseCode.md";
 import payoutResponseText from "./pages/docs/payoutResponseText.md";
-import Attributes from "./components/Attributes.vue"
-import CollapsibleItem from "./components/CollapsibleItem.vue"
-import CollapsibleParent from "./components/CollapsibleParent.vue"
+import Attributes from "./components/Attributes.vue";
+import CollapsibleItem from "./components/CollapsibleItem.vue";
+import CollapsibleParent from "./components/CollapsibleParent.vue";
 
-import 'tw-elements';
+import "tw-elements";
 </script>
 
-<script>
+<!-- <script>
 
 export default{
 
@@ -44,7 +44,7 @@ methods: {
   }
 }
 }
-</script>
+</script> -->
 
 <template>
   <div class="flex">
@@ -52,9 +52,7 @@ methods: {
       class="w-[220px] min-w-[220px] shadow-sm shadow-gray-400 fixed h-screen"
       aria-label="Sidebar"
     >
-      <div
-        class="px-3 py-14 overflow-y-auto h-full"
-      >
+      <div class="px-3 py-14 overflow-y-auto h-full">
         <!-- logo -->
         <a href="https://flowbite.com/" class="flex items-center pr-2 mb-5">
           <img
@@ -62,10 +60,7 @@ methods: {
             class="h-6 ml-3 sm:h-7"
             alt="Vandar Logo"
           />
-          <a
-            class="self-center text-xl font-semibold whitespace-nowrap"
-            >API</a
-          >
+          <a class="self-center text-xl font-semibold whitespace-nowrap">API</a>
         </a>
 
         <!-- search -->
@@ -135,7 +130,7 @@ methods: {
                   <li>
                     <a
                       href="#a2aParameters"
-                      class="flex items-center py-1 px-2 text-base font-normal text-gray-500 rounded-lg  hover:text-gray-800"
+                      class="flex items-center py-1 px-2 text-base font-normal text-gray-500 rounded-lg hover:text-gray-800"
                     >
                       <span class="mr-3"> پارامترهای مجاز </span>
                     </a>
@@ -160,31 +155,48 @@ methods: {
         <li class="mr-6">
           <a class="text-primary-500 hover:text-gray-800" href="#">Link</a>
         </li>
-      </ul> 
+      </ul>
 
 
-      <section class=" px-[4%] py-[74px] w-full grid grid-cols-2">
-        <payoutResponseText :components="{ CollapsibleItem, Attributes, CollapsibleParent }"/>
-        <div class="ltr mr-16 h-fit sticky top-0 pt-12">
-          <div class="bg-response-toolbar-bg h-10 rounded-t-lg px-3 flex items-center text-gray-600 text-body-1">Response</div>
-          <div class="p-3 bg-gray-50 border border-t-0 max-h-[73vh] overflow-y-scroll">
-            <payoutResponseCode />
-          </div>
-        </div>
-      </section>
-
-      <hr class="mx-[4%]"/>
-
-      <section class=" px-[4%] py-[74px]  w-full grid grid-cols-2">
-        <payoutResponseText :components="{ CollapsibleItem, Attributes, CollapsibleParent }"/>
-        <div class="ltr mr-16 h-fit sticky top-0 pt-12">
-          <div class="bg-response-toolbar-bg h-10 rounded-t-lg px-3 flex items-center text-gray-600 text-body-1">Response</div>
-          <div class="p-3 bg-gray-50 border border-t-0 max-h-[73vh] overflow-y-scroll">
-            <payoutResponseCode />
+      <section class="px-[4%] py-[74px] w-full grid grid-rows-4  grid-cols-11">
+        <payoutResponseText
+        class="row-span-4 col-span-6 ml-16"
+          :components="{ CollapsibleItem, Attributes, CollapsibleParent }"
+        />
+        <div class="ltr h-fit sticky top-0 pt-12 row-span-4 col-span-5">
+          <div class="code-container">
+            <div
+              class="bg-response-toolbar h-10 rounded-t-lg px-3 flex items-center text-gray-600 text-body-1"
+            >
+              Response
+            </div>
+            <div class="p-3 bg-gray-50 max-h-[73vh] overflow-y-scroll">
+              <payoutResponseCode />
+            </div>
           </div>
         </div>
       </section>
       
+      <hr class="mx-[4%]" />
+
+      <section class="px-[4%] py-[74px] w-full grid grid-rows-4  grid-cols-11">
+        <payoutResponseText
+        class="row-span-4 col-span-6 ml-16"
+          :components="{ CollapsibleItem, Attributes, CollapsibleParent }"
+        />
+        <div class="ltr h-fit sticky top-0 pt-12 row-span-4 col-span-5">
+          <div class="code-container-dark">
+            <div
+              class="bg-request-toolbar h-10 rounded-t-lg px-3 flex items-center text-gray-200 text-body-1"
+            >
+              Response
+            </div>
+            <div class="p-3 bg-request-body max-h-[73vh] overflow-y-scroll">
+              <payoutResponseCode />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </template>

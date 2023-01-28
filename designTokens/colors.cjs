@@ -21,7 +21,8 @@ module.exports = {
       400: "#e56f4a",
     },
     transparent: "transparent",
-    "request-toolbar-bg": "#3c4257",
-    "response-toolbar-bg": "#e3e8ee",
+    "request-toolbar": "#3c4257",
+    "response-toolbar": "#e3e8ee",
+    "request-body":"#4f566b"
   },
 };

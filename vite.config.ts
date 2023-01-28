@@ -16,9 +16,9 @@ import matter from "gray-matter";
 export type Options = Parameters<typeof transform>["1"];
 
 export default defineConfig({
-  test: {
-    environment: "jsdom",
-  },
+  // test: {
+  //   environment: "jsdom",
+  // },
   plugins: [
     sourceTransform({
       test: ({ id }) => id.endsWith(".md"),
@@ -26,10 +26,9 @@ export default defineConfig({
         const { data: frontmatter } = matter(source);
         const ast = parse(source);
         const replacers: Record<string, string> = {};
-        const replacers1 = {};
 
         const highlighter = await createShikiHighlighter({
-          theme: "min-light",
+          themes: ["monokai","solarized-dark","nord","solarized-light","min-light","dark-plus"],
         });
         const content = transform(ast, {
           tags: {

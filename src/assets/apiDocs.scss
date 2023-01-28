@@ -20,10 +20,14 @@ h5 {
   @apply text-title-5-bold;
 }
 
-h1,h2,h3,h4,h5{
+h1,
+h2,
+h3,
+h4,
+h5 {
   @apply text-gray-800;
-  +p{
-    @apply mt-5 ;
+  + p {
+    @apply mt-5;
   }
 }
 
@@ -42,8 +46,8 @@ p {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 pre {
@@ -54,8 +58,81 @@ pre {
   direction: ltr;
 }
 
-.language-id{
-display: none;
+.code-container {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb:vertical {
+    @apply bg-gray-300;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb:horizontal {
+    @apply bg-gray-50;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+  }
+
+  &:hover {
+    ::-webkit-scrollbar-thumb:horizontal {
+      @apply bg-gray-300;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      @apply bg-gray-500;
+    }
+  }
+
+  &-dark {
+    /* width */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      @apply bg-transparent;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb:vertical {
+      @apply bg-gray-800;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb:horizontal {
+      @apply bg-gray-700;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      @apply bg-gray-900;
+    }
+
+    &:hover {
+      ::-webkit-scrollbar-thumb:horizontal {
+        @apply bg-gray-800;
+      }
+    }
+  }
+}
+
+.language-id {
+  display: none;
 }
 
 table {
@@ -107,26 +184,31 @@ th {
   @apply text-body-1-bold mb-2 pt-4;
 }
 
-.attr{
+.attr {
   @apply mt-8;
 }
 
-.more-attr{
+.more-attr {
   @apply mt-8;
 }
 
-.accordion{
+.accordion {
   button {
     @apply pl-0;
 
     i {
       @apply text-title-2 font-light -ml-6;
     }
-  
+
     &:not(.collapsed) {
       i {
         @apply rotate-90;
-      }  
+      }
     }
   }
+}
+
+
+.two-code-fence{
+  @apply max-h-[73vh] ;
 }
