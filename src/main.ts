@@ -4,7 +4,6 @@ import App from './App.vue'
 import "./assets/apiDocs.scss"
 import 'remixicon/fonts/remixicon.css'
 
-import Attributes from './components/Attributes.vue'
 
 const app = createApp(App,)
 // app.component('attributes', Attributes) 
